@@ -1,0 +1,26 @@
+<books>
+    <book>
+        <name>The Last Wish</name>
+        <author>Andrzej Sapkowski</author>
+        <year>1993</year>
+        <price>$199</price>
+    </book>
+    <book>
+        <name>Baptism of Fire</name>
+        <author>Andrzej Sapkowski</author>
+        <year>1996</year>
+        <price>$156</price>
+    </book>
+    <book>
+        <name>The Lord of The Rings</name>
+        <author>JRR Tolkein</author>
+        <year>1968</year>
+        <price>$156</price>
+    </book>
+    <book>
+        <name>Lady of the Lake</name>
+        <author>Andrzej Sapkowski</author>
+        <year>1999</year>
+        <price>$200</price>
+    </book>
+</books>
