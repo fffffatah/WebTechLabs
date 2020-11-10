@@ -46,13 +46,13 @@
             $err_pass="Password must be 8 characters long.";
             $hasError=true;
         }
-        elseif(!strpos($_POST["pass"],"#") || !strpos($_POST["pass"],"?")){
+        elseif(strpos($_POST["pass"],"#")==false || strpos($_POST["pass"],"?")==false){
             $err_pass="Password must contain '#' or '?'.";
             $hasError=true;
         }
-        elseif(!strpos($_POST["pass"],"0")){
-            for(int $i=0; $i<10; $i++){
-                if(!strpos($_POST["pass"],"".$i."")){
+        elseif(strpos($_POST["pass"],"0")==false){
+            for($i=0; $i<10; $i++){
+                if(!strpos($_POST["pass"],"$i")){
                     $hasError=true;
                     break;
                 }
@@ -103,6 +103,14 @@
         else{
             $err_email="Email must contain '@' and '.'.";
             $hasError=true;
+        }
+        //PHONE VALIDATION
+        if(empty($_POST["phone"])){
+            $err_phone="Contact No. Required";
+            $hasError=true;
+        }
+        else{
+            $phone=$_POST["phone"];
         }
         //CITY VALIDATION
         if(isset($_POST["city"])){
