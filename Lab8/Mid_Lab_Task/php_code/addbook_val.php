@@ -79,15 +79,15 @@
             $books = simplexml_load_file("xml_data/books.xml");
 			
             $book = $books->addChild("book");
-            $admin->addChild("bname",$bname);
-			$admin->addChild("category",$category);
-            $admin->addChild("description",$description);
-            $admin->addChild("publisher",$publisher);
-            $admin->addChild("edition",$edition);
-            $admin->addChild("isbn",$isbn);
-            $admin->addChild("pages",$pages);
-            $admin->addChild("price",$price);
-            $admin->addChild("image","defaultBook.png");
+            $book->addChild("bname",$bname);
+			$book->addChild("category",$category);
+            $book->addChild("description",$description);
+            $book->addChild("publisher",$publisher);
+            $book->addChild("edition",$edition);
+            $book->addChild("isbn",$isbn);
+            $book->addChild("pages",$pages);
+            $book->addChild("price",$price);
+            $book->addChild("image","defaultBook.png");
 			
 			$xml = new DOMDocument("1.0");
 			$xml->preserveWhiteSpace=false;
