@@ -1,5 +1,13 @@
 <books>
     <book>
-    
+        <bname>The Witcher</bname>
+        <category>Fantasy</category>
+        <description>abcd</description>
+        <publisher>sdasd</publisher>
+        <edition>2</edition>
+        <isbn>12321</isbn>
+        <pages>444</pages>
+        <price>12321</pages>
+        <image>images/defaultBool.png</image>
     </books>
 </books>

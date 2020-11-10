@@ -1,5 +1,12 @@
+<?xml version="1.0"?>
 <admins>
-    <admin>
-    
-    </admin>
+  <admin>
+    <fname>abcd</fname>
+    <uname>abcdabcd</uname>
+    <pass>Abcd#1abcd</pass>
+    <gender>Male</gender>
+    <email>abfatahmn@hotmail.com</email>
+    <phone>33243234</phone>
+    <city>Sylhet</city>
+  </admin>
 </admins>

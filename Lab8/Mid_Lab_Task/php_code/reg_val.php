@@ -46,24 +46,25 @@
             $err_pass="Password must be 8 characters long.";
             $hasError=true;
         }
-        elseif(strpos($_POST["pass"],"#")==false || strpos($_POST["pass"],"?")==false){
-            $err_pass="Password must contain '#' or '?'.";
-            $hasError=true;
-        }
         elseif(strpos($_POST["pass"],"0")==false){
+            $flag=false;
             for($i=0; $i<10; $i++){
-                if(!strpos($_POST["pass"],"$i")){
-                    $hasError=true;
+                if(strpos($_POST["pass"],"$i")>=0){
+                    $flag=true;
                     break;
                 }
-                else{
-                    continue;
-                }
             }
-            $err_pass="Password must contain 1 numeric.";
+            if(!$flag){
+                $err_pass="Password must contain 1 numeric.";
+                $hasError=true;
+            }
         }
         elseif(strtolower($_POST["pass"])==$_POST["pass"] || strtolower($_POST["pass"])==$_POST["pass"]){
             $err_pass="Password must contain 1 Upper and Lowercase letter.";
+            $hasError=true;
+        }
+        elseif(strpos($_POST["pass"],"#")==false){
+            $err_pass="Password must contain '#' or '?'.";
             $hasError=true;
         }
         else{

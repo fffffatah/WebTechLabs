@@ -33,8 +33,8 @@
                     <tr>
                         <td align="left">Gender:</td>
                         <td>
-                            <input type="radio" name="gender"> Male
-                            <input type="radio" name="gender"> Female
+                            <input type="radio" name="gender" value="Male"> Male
+                            <input type="radio" name="gender" value="Female"> Female
                         </td>
                         <td align="left"><span style="color:red;">*<?php echo $err_gender;?></span></td>
                     </tr>

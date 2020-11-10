@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	$uname="";
 	$err_uname="";
 	$pass="";
@@ -24,7 +25,7 @@
 		if(!$hasError){
 			$admins = simplexml_load_file("xml_data/admins.xml");
 			foreach($admins as $admin){
-                if(strcmp($admin->uname,$_POST["uname"])==0 && strcmp($user->pass,$_POST["pass"])==0){
+                if(strcmp($admin->uname,$_POST["uname"])==0 && strcmp($admin->pass,$_POST["pass"])==0){
 					$flag=true;
                 }
                 else{
@@ -37,7 +38,7 @@
 				echo "Invalid Credentials!";
 			}
 			else{
-				header("Location: Dashboard.php");
+                header("Location: Dashboard.php");
 			}
 		}
 	}
