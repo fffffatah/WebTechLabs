@@ -9,4 +9,31 @@
     <phone>33243234</phone>
     <city>Sylhet</city>
   </admin>
+  <admin>
+    <fname>abcd</fname>
+    <uname>abcdabcd</uname>
+    <pass/>
+    <gender>Female</gender>
+    <email>abfatahmn@hotmail.com</email>
+    <phone>33243234</phone>
+    <city>Dhaka</city>
+  </admin>
+  <admin>
+    <fname>abcd</fname>
+    <uname>abcdabcd</uname>
+    <pass/>
+    <gender>Male</gender>
+    <email>abfatahmn@hotmail.com</email>
+    <phone>33243234</phone>
+    <city>Sylhet</city>
+  </admin>
+  <admin>
+    <fname>abcd</fname>
+    <uname>abcdabcd</uname>
+    <pass>Abcd123#</pass>
+    <gender>Male</gender>
+    <email>abfatahmn@hotmail.com</email>
+    <phone>33243234</phone>
+    <city>Chittagong</city>
+  </admin>
 </admins>

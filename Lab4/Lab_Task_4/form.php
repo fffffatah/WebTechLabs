@@ -64,35 +64,36 @@
         //PASSWORD VALIDATION
         if(empty($_POST["pass"])){
             $err_pass="Please Enter Password!";
-            $has_err=true;
+            $hasError=true;
         }
         elseif(strlen($_POST["pass"])<8){
             $err_pass="Password must be 8 characters long.";
-            $has_err=true;
+            $hasError=true;
         }
-        elseif(!strpos($_POST["pass"],"#") || !strpos($_POST["pass"],"?")){
-            $err_pass="Password must contain '#' or '?'.";
-            $has_err=true;
+        elseif(!strpos($_POST['pass'], "1") && !strpos($_POST['pass'], "2") && !strpos($_POST['pass'], "3") && !strpos($_POST['pass'], "4")
+            && !strpos($_POST['pass'], "5") && !strpos($_POST['pass'], "6") && !strpos($_POST['pass'], "7") && !strpos($_POST['pass'], "8")
+            && !strpos($_POST['pass'], "9") && !strpos($_POST['pass'], "0")) {
+            $err_pass="Password must have 1 numeric";
+            $hasError=true;
         }
-        elseif(!strpos($_POST["pass"],"1")){
-            $err_pass="Password must contain 1 numeric.";
-            $has_err=true;
-        }
-        elseif(strtolower($_POST["pass"])==$_POST["pass"] || strtolower($_POST["pass"])==$_POST["pass"]){
+        elseif(strcmp(strtoupper($_POST["pass"]),$_POST["pass"])==0 && strcmp(strtolower($_POST["pass"]),$_POST["pass"])==0){
             $err_pass="Password must contain 1 Upper and Lowercase letter.";
-            $has_err=true;
+            $hasError=true;
+        }
+        elseif(strpos($_POST["pass"],"#")==false && strpos($_POST["pass"],"?")==false){
+            $err_pass="Password must contain '#' or '?'.";
+            $hasError=true;
+        }
+        elseif(empty($_POST["cpass"])){
+            $err_cpass="Please Enter Confirm Password!";
+            $hasError=true;
+        }
+        elseif(strcmp($_POST["cpass"],$_POST["pass"])!=0){
+            $err_cpass="Password and Confirm Password must be same.";
+            $hasError=true;
         }
         else{
             $pass=htmlspecialchars($_POST["pass"]);
-        }
-        //CONFIRM PASSWORD VALIDATION
-        if(empty($_POST["cpass"])){
-            $err_cpass="Please Enter Confirm Password!";
-            $has_err=true;
-        }
-        elseif(!strcmp($_POST["cpass"],strtoupper($_POST["pass"]))){
-            $err_cpass="Password and Confirm Password must be same.";
-            $has_err=true;
         }
         //EMAIL VALIDATION
         if(empty($_POST["email"])){

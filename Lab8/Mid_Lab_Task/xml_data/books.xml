@@ -1,13 +1,36 @@
+<?xml version="1.0"?>
 <books>
-    <book>
-        <bname>The Witcher</bname>
-        <category>Fantasy</category>
-        <description>abcd</description>
-        <publisher>sdasd</publisher>
-        <edition>2</edition>
-        <isbn>12321</isbn>
-        <pages>444</pages>
-        <price>12321</pages>
-        <image>images/defaultBool.png</image>
-    </books>
+  <book>
+    <bname>The Witcher</bname>
+    <category>Fantasy</category>
+    <description>abcd</description>
+    <publisher>sdasd</publisher>
+    <edition>2</edition>
+    <isbn>12321</isbn>
+    <pages>444</pages>
+    <price>12321</price>
+    <image>images/defaultBook.png</image>
+  </book>
+  <book>
+    <bname>asdasd</bname>
+    <category>Fantasy</category>
+    <description>asdasd</description>
+    <publisher>asdasd</publisher>
+    <edition>123</edition>
+    <isbn>31231231312</isbn>
+    <pages>123123</pages>
+    <price>1231231</price>
+    <image>images/defaultBook.png</image>
+  </book>
+  <book>
+    <bname>asdasd</bname>
+    <category>Fantasy</category>
+    <description>sadasd</description>
+    <publisher>sad</publisher>
+    <edition>asdsa</edition>
+    <isbn>123123</isbn>
+    <pages>123123</pages>
+    <price>213213</price>
+    <image>images/defaultBook.png</image>
+  </book>
 </books>

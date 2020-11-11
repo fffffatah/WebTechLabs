@@ -1,8 +1,8 @@
 <?php
     include_once "php_code/addbook_val.php" ;
-    if(empty(session_id())){
-        header("Location: Login.php");
-    }
+    if(!isset($_COOKIE["uname"])){
+		header("Location: Login.php");
+	}
 ?>
 <html>
     <head>

@@ -24,13 +24,11 @@
 		
 		if(!$hasError){
 			$admins = simplexml_load_file("xml_data/admins.xml");
+			$flag=false;
 			foreach($admins as $admin){
                 if(strcmp($admin->uname,$_POST["uname"])==0 && strcmp($admin->pass,$_POST["pass"])==0){
 					$flag=true;
-                }
-                else{
-                    $flag=false;
-                    break;
+					break;
                 }
 			}
 			
@@ -38,6 +36,9 @@
 				echo "Invalid Credentials!";
 			}
 			else{
+				session_start();
+			    $_SESSION["uname"] = $uname;
+			    setcookie("uname",$uname,time() + 120);
                 header("Location: Dashboard.php");
 			}
 		}

@@ -1,7 +1,7 @@
 <?php
-    if(empty(session_id())){
-        header("Location: Login.php");
-    }
+    if(!isset($_COOKIE["uname"])){
+		header("Location: Login.php");
+	}
 ?>
 <html>
     <head>
@@ -29,13 +29,10 @@
                                 </tr>
                                 
                                 <?php
-                                    if(empty(session_id())){
-                                        header("Location: Login.php");
-                                    }
                                     $books = simplexml_load_file("xml_data/books.xml");
                                     $i=0;
                                     foreach($books as $book){
-                                        echo "<tr><td>".$i."</td><td>".$book->bname."</td><td>".$book->publisher."</td><td>".$book->isbn."</td><td>".$book->price."</td><td><img src=".$book->image." style="width:20px;height:20px;"></td><td><img src="images/delete.png" style="width:10px;height:10px;"></td></tr>";
+                                        echo "<tr><td>".$i."</td><td>".$book->bname."</td><td>".$book->publisher."</td><td>".$book->isbn."</td><td>".$book->price."</td><td><img src=".$book->image." style=\"width:20px;height:20px;\"></td><td><img src=\"images/delete.png\" style=\"width:10px;height:10px;\"></td></tr>";
                                         $i++;
                                     }
                                 ?>

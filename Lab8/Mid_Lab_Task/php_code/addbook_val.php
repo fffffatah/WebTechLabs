@@ -87,7 +87,7 @@
             $book->addChild("isbn",$isbn);
             $book->addChild("pages",$pages);
             $book->addChild("price",$price);
-            $book->addChild("image","defaultBook.png");
+            $book->addChild("image","images/defaultBook.png");
 			
 			$xml = new DOMDocument("1.0");
 			$xml->preserveWhiteSpace=false;
